@@ -1,74 +1,73 @@
-# Business Management Web Application  <br>
+# Business Management Web Application
 
+## Project Description
+The **Business Management Web Application** is a comprehensive tool designed to streamline various operational aspects for businesses. It offers a user-friendly interface to efficiently manage **customer data, inventory, and orders**, among other crucial business functions.
 
+---
 
+## Features
 
-## Project Desc : Business Management Web Application 
-  => The Business Management Web Application is a comprehensive tool designed to help businesses manage various aspects of their operations. 
-          It provides a user-friendly interface for tasks like managing customer data, inventory, orders, and more.
+* **Customer Management**: Easily add, update, and delete customer information.
+* **Inventory Management**: Keep precise track of inventory items, including stock levels and pricing.
+* **Order Management**: Efficiently manage customer orders, from creation to processing.
+* **User Authentication**: Provides secure login and authentication mechanisms for both administrators and staff members.
+* **Role-Based Access Control**: Define and assign specific roles and permissions to different user types, ensuring controlled access.
+* **Thymeleaf Templates**: Utilizes the Thymeleaf server-side Java template engine for dynamic and responsive HTML generation.
+* **Database Integration**: Seamlessly integrated with MySQL for robust data storage and retrieval.
 
+---
 
+## Technologies Used
 
-## Features  :
+* **Spring Boot**: The core backend framework for building scalable Java-based web applications.
+* **Thymeleaf**: A powerful server-side Java template engine for dynamic HTML rendering.
+* **MySQL**: A reliable relational database management system for persistent data storage.
+* **IDE/Tool**: Developed using **Spring Tool Suite 4 (Eclipse)**.
 
-- **Customer Management**: Easily add, update, and delete customer information.
-- **Inventory Management**: Keep track of your inventory items, including stock levels and pricing.
-- **Order Management**: Manage customer orders such as order creation .
-- **User Authentication**: Secure login and authentication for admin and staff members.
-- **Role-Based Access Control**: Define roles and permissions for different user types.
-- **Thymeleaf Templates**: Utilizes Thymeleaf for dynamic HTML templates.
-- **Database Integration**: Integrated with MySQL for data storage.
+---
 
+## Installation
 
+Follow these steps to set up and run the Business Management Web Application:
 
+1.  **Clone the Repository**:
+    ```bash
+    git clone [https://github.com/dev-amul/Business_Management_Project.git](https://github.com/dev-amul/Business_Management_Project.git)
+    ```
 
-## Technologies Used :
+2.  **Import the Project into STS/Eclipse**:
+    * Open STS/Eclipse.
+    * Navigate to `File` > `Import` > `Maven` > `Existing Maven Projects`.
+    * Click `Browse`, select the `Business_Management_Project` directory, and then click `Finish`.
 
-- Spring Boot: Backend framework for building Java-based web applications.
-- Thymeleaf: Server-side Java template engine for dynamic HTML generation.
-- MySQL: Relational database management system for data storage.
-- IDE/Tool : Spring Tool Suite 4 (Eclipse)
+3.  **Navigate to Project Directory**:
+    * Ensure your command line is in the `Business_Management_Project` directory if performing command-line operations.
 
+4.  **Configure Database Connection**:
+    * Edit the `application.properties` file to set up your MySQL database connection details. Refer to the **Database** section below for required properties.
 
+5.  **Run the Project**:
+    * Execute the `main` method in `BusinessProjectApplication.java`.
+    * Alternatively, right-click on the project in STS/Eclipse, then select `Run As` > `Spring Boot App`.
 
+6.  **Access the Application**:
+    * Open your web browser and go to `http://localhost:2330/home`.
 
-## Installation :
+7.  **Database Initialization**:
+    * Upon first run, the application will create the necessary tables in your configured database.
+    * **Important**: You must manually add an administrator user record directly into the database to enable admin login and access.
 
-1. Clone the repository : $ git clone https://github.com/dev-amul/Business_Management_Project.git <br>
+---
 
-2. Import the project inside STS/Eclipse : <br>
-     - Open STS/Eclipse > file > import > maven > existing project > browse > finish . <br>
-     
-3. Make sure you are in the Business_Management_Project directory. <br>
+## Database Configuration
 
+**MySQL** is the chosen database for this project. Configure your database connection by editing the `src/main/resources/application.properties` file with the appropriate values:
 
-4.Configure the database connection is application.properties (check the Database section for more information). <br>
-
-5.Run the project (by running main method is BusinessProjectApplication.java) OR right clink on the project > Run As > Spring Boot App. <br>
-
-6.Open http://localhost:2330/home in any browser. <br>
-
-7.Now your tables will be created in the databse. <br>
-   - You have to add one admin data manually to login as admin, So add one admin data. <br>
-    
-
-
-
-## Database :
-
-MySQL can be used as the database for this project. 
-The database connection can be configured in the application.properties file, with the appropriate values for the following properties: <br>
-
-spring.datasource.name=[Your Database Name] <br>
-spring.datasource.url=jdbc:mysql://localhost:3306/[Your Database Name] <br>
-spring.datasource.password=[Your password] <br>
-spring.datasource.username=[Your username] <br>
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver <br>
-spring.jpa.hibernate.ddl-auto=update <br>
-server.port=2330[Optional] <br>
-
-
-
-
-
-
+```properties
+spring.datasource.name=[Your Database Name]
+spring.datasource.url=jdbc:mysql://localhost:3306/[Your Database Name]
+spring.datasource.password=[Your password]
+spring.datasource.username=[Your username]
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+server.port=2330
